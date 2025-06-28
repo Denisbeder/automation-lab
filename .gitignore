@@ -1,0 +1,30 @@
+.env
+.vscode
+.DS_Store
+*.DS_Store
+
+# compiled output
+/dist
+/node_modules
+
+# Logs
+logs/**.json
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Package
+/yarn.lock
+/pnpm-lock.yaml
+
+# IDEs
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.nova/*
+.idea/*
