@@ -1,9 +1,9 @@
 version: "2"
-authtoken: <YOUR_TOKEN>
 tunnels:
   n8n:
     proto: http
     addr: n8n:5678
+    domain: select-chicken-wholly.ngrok-free.app
   evolution-api:
     proto: http
     addr: evolution-api:8080

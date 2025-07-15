@@ -26,7 +26,7 @@ services:
       - lab-network
 
   ngrok:
-    image: ngrok/ngrok:alpine
+    image: ngrok/ngrok:latest
     container_name: lab-ngrok
     restart: always
     ports:
