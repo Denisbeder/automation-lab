@@ -5,20 +5,10 @@ services:
     restart: always
     ports:
       - 80:80
-      - 443:443
     volumes:
       - ./nginx/n8n.conf:/etc/nginx/conf.d/n8n.conf
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/usr/share/nginx/html/certbot
-    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
-
-  certbot:
-    image: certbot/certbot
-    restart: unless-stopped
-    volumes:
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/usr/share/nginx/html/certbot
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    depends_on:
+      - n8n
 
   postgres:
     image: postgres:16
