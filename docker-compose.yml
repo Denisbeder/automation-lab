@@ -7,7 +7,7 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - ./nginx/n8n.conf:/etc/nginx/conf.d/n8n.conf
+      - ./nginx/vhost.conf:/etc/nginx/conf.d/vhost.conf
       - ./certs/cloudflare.pem:/etc/ssl/certs/cloudflare.pem
       - ./certs/cloudflare.key:/etc/ssl/certs/cloudflare.key
     networks:
