@@ -5,6 +5,7 @@ services:
     restart: always
     ports:
       - 80:80
+      - 443:443
     volumes:
       - ./nginx/n8n.conf:/etc/nginx/conf.d/n8n.conf
       - ./certs/cloudflare.pem:/etc/ssl/certs/cloudflare.pem
