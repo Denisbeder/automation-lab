@@ -10,8 +10,8 @@ services:
       - ./nginx/n8n.conf:/etc/nginx/conf.d/n8n.conf
       - ./certs/cloudflare.pem:/etc/ssl/certs/cloudflare.pem
       - ./certs/cloudflare.key:/etc/ssl/certs/cloudflare.key
-    depends_on:
-      - n8n
+    networks:
+      - lab-network
 
   postgres:
     image: postgres:16
