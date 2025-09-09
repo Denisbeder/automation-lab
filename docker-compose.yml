@@ -7,7 +7,7 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - ./nginx/index.html:/usr/share/nginx/html/index.html
+      #- ./nginx/index.html:/usr/share/nginx/html/index.html
       - ./nginx/sites.conf:/etc/nginx/conf.d/sites.conf
       - ./certs/cloudflare.pem:/etc/ssl/certs/cloudflare.pem
       - ./certs/cloudflare.key:/etc/ssl/certs/cloudflare.key
