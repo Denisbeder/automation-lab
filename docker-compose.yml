@@ -41,22 +41,22 @@ services:
     networks:
       - lab-network
 
-  ngrok:
-    image: ngrok/ngrok:latest
-    container_name: lab-ngrok
-    restart: always
-    ports:
-      - 4040:4040
-    env_file:
-      - .env
-    volumes:
-      - ./ngrok.yml:/etc/ngrok.yml
-    command: start --all --config /etc/ngrok.yml
-    depends_on:
-      - n8n
-      - evolution-api
-    networks:
-      - lab-network
+#  ngrok:
+#    image: ngrok/ngrok:latest
+#    container_name: lab-ngrok
+#    restart: always
+#    ports:
+#      - 4040:4040
+#    env_file:
+#      - .env
+#    volumes:
+#      - ./ngrok.yml:/etc/ngrok.yml
+#    command: start --all --config /etc/ngrok.yml
+#    depends_on:
+#      - n8n
+#      - evolution-api
+#    networks:
+#      - lab-network
 
   redis:
     image: bitnami/redis:latest
